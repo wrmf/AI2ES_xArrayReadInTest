@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import cartopy
+import xarray as xr
 
 filenames = ["TestData.txt"]
 #filenames = ["McGovern1.asc", "McGovern2.asc", "McGovern3.asc", "McGovern4.asc", "McGovern5.asc"]
@@ -38,12 +38,5 @@ xr_test = df_test.to_xarray()
 #da = da.isel(lat=coords[0][0], lon=coords[1][0]) +1
 
 print(df_test)
-for n in xr_test["Lat"]:
-    print(n)
-for n in xr_test["Lon"]:
-    print(n)
 print(xr_test)
 
-
-lightning = xr_test.isel()
-lightning.plot()
